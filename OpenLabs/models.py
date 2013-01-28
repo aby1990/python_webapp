@@ -11,7 +11,7 @@ class details(models.Model):
     name = models.CharField(max_length=30)
     bdate = models.DateField();
     email = models.EmailField(max_length=30, unique=True)
-    mobile = models.IntegerField(max_length=10)
+    mobile = models.IntegerField()
     qual = models.CharField(max_length=15)
     skill = models.CharField(max_length=60)
 

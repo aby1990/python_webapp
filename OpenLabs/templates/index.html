@@ -19,7 +19,7 @@
 </head>
 <body><div>
         <form action="/views/submit/" method="post">
-        {% csrf_token %}
+     {% csrf_token %} 
                 <h1>Technical Portfolio</h1>
                 <table border=0>
                         <tr>
@@ -28,8 +28,8 @@
                         </tr>
 
                         <tr>
-                                <td><label>Birthdate (dd/mm/yyyy):</label></td>
-                                <td><input type="text" name="bday"></td>
+                                <td><label>Birthdate (yyyy-mm-dd):</label></td>
+                                <td><input type="text" name="bdate"></td>
                         </tr>
                         <tr>
                                 <td><label>Email id :</label></td>
@@ -42,12 +42,7 @@
                         <tr>
                                 <td><label>Qualification :</label></td>
                                 <td><input type="text" name="qual"></td>
-                                <!--  td><select>
-                                                <option value="high school">High School</option>
-                                                <option value="secondary school">Secondary School</option>
-                                                <option value="graduation">Graduation</option>
-                                                <option value="masters">Masters</option>
-                                </select></td-->
+                                
                         </tr>
                         <tr>
                                 <td><label>Skills :</label></td>

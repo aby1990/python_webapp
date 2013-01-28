@@ -24,7 +24,7 @@ def submit(request):
   
     if request.method == 'POST':
         name = request.POST.get('name')
-        bdate = request.POST.get('bday')
+        bdate = request.POST.get('bdate')
         email = request.POST.get('email')
         mobile = request.POST.get('mobile')
         qual = request.POST.get('qual')
@@ -32,14 +32,14 @@ def submit(request):
         
         if name and bdate and email and mobile and qual and skill:
             data = details.objects.create(
-                  name=name, bday=bdate, 
+                  name=name, bdate=bdate, 
                   email=email, mobile=mobile, 
                   qual=qual, skill=skill
            )
             data.save()
         
         
-            
+            return render_to_response("templates/index.html")
     
     
 
