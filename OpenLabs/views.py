@@ -1,5 +1,5 @@
 #from django.template import Context, loader
-#from django.http import HttpResponse
+from django import http
 #from OpenLabs.models import details
 
 #from django.http import HttpResponse
@@ -37,9 +37,7 @@ def submit(request):
                   qual=qual, skill=skill
            )
             data.save()
-        
-        
-            return render_to_response("templates/index.html")
+        return http.HttpResponseRedirect('')
     
     
 
