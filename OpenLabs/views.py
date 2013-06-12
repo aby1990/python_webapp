@@ -13,7 +13,7 @@ from django.shortcuts import render_to_response
 #from models import details
 from OpenLabs.models import details
 #from django.db.models import Q
-#from django.core.context_processors import csrf
+from django.core.context_processors import csrf
 #from django.shortcuts import render_to_response
 
 def home(request):
@@ -32,12 +32,12 @@ def submit(request):
         
         if name and bdate and email and mobile and qual and skill:
             data = details.objects.create(
-                  name=name, bdate=bdate, 
-                  email=email, mobile=mobile, 
-                  qual=qual, skill=skill
+                  name=request.cleaned_data['name'], bdate=request.cleaned_data['bdate'], 
+                  email=request.cleaned_data['email'], mobile=request.cleaned_data['mobile'], 
+                  qual=request.cleaned_data['qual'], skill=request.cleaned_data['skill']
            )
             data.save()
-        return http.HttpResponseRedirect('')
+        return http.HttpResponseRedirect("/welcome/")
     
     
 

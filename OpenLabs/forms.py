@@ -4,3 +4,4 @@ from OpenLabs.models import details
 class detailsForm(ModelForm):
     class Meta:
         model = details
+        
